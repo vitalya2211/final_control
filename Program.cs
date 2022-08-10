@@ -31,35 +31,50 @@ namespace final_control
                 Console.Write(i + '\t');
                 Console.WriteLine();
             }
-            string sizeString(string[] vs,string[] vs2,string[]vs3)
+            string sizeString(string[] vs)
             {
-                string str=null;
-                for(int i=0;i<vs.Length;i++)
+                string str = null;
+                for (int i=0;i<vs.Length;i++)
                 {
+                    
                     if (vs[i].Length <= 3)
-                        str += vs[i] + " ";
+                        str += vs[i] + ' ';
                 }
-                for(int i=0;i<vs2.Length;i++)
-                {
-                    if (vs2[i].Length <= 3)
-                        str += vs2[i] + " ";
-                }
-                for (int i = 0; i < vs3.Length; i++)
-                {
-                    if (vs3[i].Length <= 3)
-                        str += vs3[i] + " ";
-                }
-                    return str;
+                return str;
             }
-            Console.WriteLine("вариант первый, для дальнейшего использования контроля версий.\n " +
-                "Выбор из заданных массивов строк, данных меньше либо равных 3 символам");
+            //string sizeString(string[] vs,string[] vs2,string[]vs3)
+            //{
+            //    string str=null;
+            //    for(int i=0;i<vs.Length;i++)
+            //    {
+            //        if (vs[i].Length <= 3)
+            //            str += vs[i] + " ";
+            //    }
+            //    for(int i=0;i<vs2.Length;i++)
+            //    {
+            //        if (vs2[i].Length <= 3)
+            //            str += vs2[i] + " ";
+            //    }
+            //    for (int i = 0; i < vs3.Length; i++)
+            //    {
+            //        if (vs3[i].Length <= 3)
+            //            str += vs3[i] + " ";
+            //    }
+            //        return str;
+            //}
+            //Console.WriteLine("вариант первый, для дальнейшего использования контроля версий.\n " +
+            //   "Выбор из заданных массивов строк, данных меньше либо равных 3 символам");
+            Console.WriteLine("введите данные в массив, разделяя пробелом: ");
+            string[] value = Console.ReadLine().Split(' ');
             string[] ferst= { "hello", "2", "world", ":-)" }, second= { "1234", "1567", "-2", "computer science" },
                 third= { "Russia", "Denmark", "Kazan" };
+            
             Console.WriteLine("имеющиеся массивы: ");
-            printString(ferst);
-            printString(second);
-            printString(third);
-            Console.WriteLine( sizeString(ferst,second,third));
+            //printString(ferst);
+            //printString(second);
+            //printString(third);
+            //Console.WriteLine( sizeString(ferst,second,third));
+            Console.WriteLine(sizeString(value));
             Console.WriteLine();
             Console.ReadKey();
 
